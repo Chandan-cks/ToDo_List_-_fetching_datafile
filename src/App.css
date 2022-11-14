@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+}
+table{
+  margin-left: 420px;
+}
+.tableborder{
+  border: 2px splid black;
+  width: 100%;
+  
+}
+td, th {
+  border: 1px solid black;
+}
+form{
+  display: inline-grid;
+}
