@@ -1,0 +1,32 @@
+Day1
+Fetch api in Javascript
+The Fetch API is a promise-based API of JavaScript for making asynchronous HTTP requests in the browser similar to XMLHttpRequest (XHR).Fetch API is standardized now and is supported by all modern browsers except IE. The fetch() method only has one mandatory argument: the URL of the resource that we want to fetch.
+
+How to use fetch API:-just pass the URLfetch() method
+fetch('/js/users.json')
+   .then(response => { 
+     // handle response data
+   })
+   .catch(err => {
+     // handle errors
+   });
+   We are using the then method to wait for the server's response. 
+   The catch() method is optional. Its purpose is to intercepts errors if the request fails to complete due to network failure or any other reason.
+   
+   let us see how we can extract the JSON from that response once the request completes:
+   
+   fetch('URL here')
+.then(res => res.json())
+.then(json => console.log(json));
+
+GET Request:-
+The purpose of this method is to retrieve data from the server at the specified resource
+
+fetch('https://api.github.com/orgs/nodejs')
+.then(response => response.json())
+.then(data => {
+  console.log(data) // Prints result from `response.json()` in getRequest
+})
+.catch(error => console.error(error))
+
+
